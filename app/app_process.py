@@ -113,6 +113,13 @@ def process_time(active_node, event_date):
     return generated_rules
 
 def process_input(node, leave_time):
+    global child_count
+    global has_requirements
+    global json_values
+    global is_current_node_parent
+    global last_encountered_keys
+    global current_values
+    global generated_rules
     # Process the input 'node' using inference logic and generate rules based on the provided 'leave_time'.
 
     # Perform inference to obtain an active node.
@@ -123,9 +130,15 @@ def process_input(node, leave_time):
 
     # Process time values in the active node and generate rules.
     rules = process_time(active_node, event_date)
+    #reset all values
+    child_count = 0
+    is_current_node_parent = False
+    json_values = []  # Initialize an empty list to store JSON values.
+    generated_rules = []  # Initialize an empty list to store generated rules.
+    has_requirements = False
+    last_encountered_keys = []  # Initialize an empty list to store the last encountered key in the dictionary.
+    is_head_parent = False
+    current_values = 0  # Initialize a variable to store values during processing.
 
     # Return the generated rules.
     return rules
-
-
-

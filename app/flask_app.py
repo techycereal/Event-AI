@@ -10,7 +10,7 @@ def submit():
         input_rules = request.form.get('rules')  # Get the 'rules' input value from the POST request.
         input_time = request.form.get('time')  # Get the 'time' input value from the POST request.
         
-        # Call the 'process' function from the 'process_app' script, passing 'input_rules' and 'input_time' as arguments.
+        # Call the 'process' function from the 'app_process' script, passing 'input_rules' and 'input_time' as arguments.
         result_rule = app_process.process_input(input_rules, input_time)
         print(result_rule)  # Print the 'result_rule' variable to the server log for debugging purposes.
         
