@@ -1,3 +1,0 @@
-{"SRC": "- summons : 47, -- resume : 39, - activity : 81, - submission : 13","EXR": "(:summons (:summons 47 :resume (:resume 39)) :activity (:activity 81) :submission (:submission 13))"}
-{"SRC": "- provision : 48, - request : 97, - deliver : 73, - communicate : 13","EXR": "(:provision (:provision 48) :request (:request 97) :deliver (:deliver 73) :communicate (:communicate 13))"}
-{"SRC": "- submission : 82, - purchase : 41, - request : 89","EXR": "(:submission (:submission 82) :purchase (:purchase 41) :request (:request 89))"}

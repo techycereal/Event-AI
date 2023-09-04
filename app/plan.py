@@ -636,7 +636,6 @@ def main():
         return result
 
     # Initialize our Trainer
-    training_args.num_train_epochs = 3
     trainer = Seq2SeqTrainer(
         model=model,
         args=training_args,

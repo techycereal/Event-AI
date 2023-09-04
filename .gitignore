@@ -1,9 +1,9 @@
 tst-summarization
 .lock
-_pycache_- Shortcut.Ink
-data.txt
-test.json
-train.json
-testing.py
+/app/__pycache__ - Shortcut.lnk
+/app/data.txt
+/app/test.json
+/app/train.json
+/app/testing.py
 __pycache__
-backup.py
+/app/backup.py
