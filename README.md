@@ -1,8 +1,7 @@
 # Rules Engine
-### Create complex rules from data structures to return a dependency graph
+### The Rules Engine is a powerful tool that allows you to create complex rules from data structures, enabling you to generate a dependency graph. It provides a flexible and efficient way to model dependencies and relationships within your data.
 
 # Sample Rule
-    Day of entering information: 9/4/2023
     Time to leave: January 9 2024 
         - meet: 90, --deliver: 40, --email: 37, - document : 80, - build: 30
 
