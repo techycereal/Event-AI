@@ -16,3 +16,13 @@
     $ python3 -m venv venv
     $ source /venv/bin/activate
     $ pip install -r requirements.txt
+
+#Generate Data
+    $ python3 generate.py
+
+#Train the model
+    $ python3 plan.py     --model_name_or_path google/flan-t5-small     --do_train     --do_eval     --train_file train.json     --validation_file test.json     --source_prefix "order: "     --output_dir tst-summarization     --overwrite_output_dir     --per_device_train_batch_size=4     --per_device_eval_batch_size=4     --predict_with_generate
+
+#Run the Flask App
+    $ export FLASK_APP=flask_app.py
+    $ python3 -m flask run
