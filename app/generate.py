@@ -36,16 +36,10 @@ vocab = [
 ]
 
 final_rules = []  # Initialize an empty list to store the final rules.
-requirements_greater_than_two = 0
 is_requirement = 0
 set_requirement = ['-']
-first_key = ""
 has_requirement = False
-iteration = 0
-step_down = 0
 last_key = 0
-start = True
-remove_from = []
 
 # Define a function to create requirements for the timeline.
 def create_requirements(key, timeline_keys):
@@ -129,7 +123,6 @@ def create_timeline(vocab, values, rule_count, timeline):
 # Define a function to generate a sentence.
 def generate_sentence():
     global final_rules
-    plan = []
     timeline, leave_time, timeline_keys = generate()
     
     # Add requirements to the timeline and remove duplicates.
@@ -137,13 +130,6 @@ def generate_sentence():
         for key_item in timeline[key]:
             if timeline[key][key_item] == 'has_requirement':
                 timeline[key][key_item] = create_requirements(key_item, timeline_keys)
-                plan.append(key_item)
-    
-    plan = set(plan)
-    
-    # Delete conditions that have become requirements.
-    for each in plan:
-        del timeline[each]
     
     final_rules = dictionary_walker(timeline)
     final_rules = ', '.join(final_rules)
@@ -154,12 +140,8 @@ def generate_sentence():
 # Define a recursive function to traverse the timeline dictionary.
 def dictionary_walker(timeline):
     global set_requirement
-    global has_requirement
     global final_rules
     global is_requirement
-    global first_key
-    global iteration
-    global step_down
     global last_key
     
     for key, value in timeline.items():
