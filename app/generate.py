@@ -12,7 +12,7 @@ event_types = [
     'mail',    
     'trial',
     'hearing',
-    'depose'
+    'depose' 
 ]
 
 # Define a list of vocabulary words.

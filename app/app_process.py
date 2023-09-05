@@ -106,7 +106,7 @@ def process_time(active_node, event_date):
 
             # Generate a rule string with the calculated date.
             generated_rule = str(key + ': ' + format(desired_date, '%D'))
-
+ 
             # Append the rule to the generated rules collection.
             generated_rules.append(generated_rule)
 

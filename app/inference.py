@@ -12,7 +12,7 @@ def infer(rules):
     encoded_input = tokenizer("order: " + rules, return_tensors="pt").input_ids
     
     # Generate a summary using the model based on the encoded input.
-    outputs = model.generate(encoded_input, max_length=200)
+    outputs = model.generate(encoded_input, max_length=200) 
     
     # Decode the generated output, skipping special tokens.
     decode = tokenizer.decode(outputs[0], skip_special_tokens=True)
