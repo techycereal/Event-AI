@@ -52,7 +52,6 @@ def create_requirements(key, timeline_keys):
     timeline = {}
     timeline_keys[0] = key
     timeline = {key: random.randint(10, 150)}  # Create a requirement with a random duration.
-    print(timeline)
     return timeline
 
 # Define a function to generate a timeline.
@@ -147,7 +146,6 @@ def generate_sentence():
         del timeline[each]
     
     final_rules = dictionary_walker(timeline)
-    print(final_rules)
     final_rules = ', '.join(final_rules)
     rule_final = final_rules
     final_rules = []
@@ -164,8 +162,6 @@ def dictionary_walker(timeline):
     global step_down
     global last_key
     
-    print(str(timeline) + 'timeline')
-    
     for key, value in timeline.items():
         if isinstance(value, dict):
             if last_key >= 1:
@@ -179,7 +175,6 @@ def dictionary_walker(timeline):
                 pass
             else:
                 last_key = len(value) - 1
-                print(last_key)
             dictionary_walker(value)
         else:
             set_requirement = ''.join(set_requirement)
